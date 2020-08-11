@@ -19,34 +19,36 @@ let pokemonTeam = { 0: "", 1: "", 2: "", 3: "", 4: "", 5: "" };
 $("#submitBtn").on("click", function (event) {
   event.preventDefault();
 
-  trainerName = $("#nameInput").val();
-  trainerGender.text = $("#genderSelect").val();
-  if (trainerGender.text === "male") {
-    trainerGender.icon = "fas fa-mars";
-    trainerGender.img =
-      "https://cdn.bulbagarden.net/upload/a/a4/Black_White_Hilbert.png";
-  } else {
-    trainerGender.icon = "fas fa-venus";
-    trainerGender.img =
-      "https://cdn.bulbagarden.net/upload/6/6f/Black_White_Hilda.png";
+  if ($("#nameInput").val() !== "") {
+    trainerName = $("#nameInput").val();
+    trainerGender.text = $("#genderSelect").val();
+    if (trainerGender.text === "male") {
+      trainerGender.icon = "fas fa-mars";
+      trainerGender.img =
+        "https://cdn.bulbagarden.net/upload/a/a4/Black_White_Hilbert.png";
+    } else {
+      trainerGender.icon = "fas fa-venus";
+      trainerGender.img =
+        "https://cdn.bulbagarden.net/upload/6/6f/Black_White_Hilda.png";
+    }
+
+    for (var i = 0; i < 6; i++) {
+      pokemonTeam[i] = $(`#pokemonInput${i + 1}`)
+        .val()
+        .toLowerCase();
+    }
+
+    const newTrainer = new Trainer(trainerName, trainerGender, pokemonTeam);
+    newTrainer.generateTrainerCard();
+
+    // ----------------------------------------------------------
+
+    $("#nameInput").val("");
+    for (var j = 1; j <= 6; j++) {
+      $(`#pokemonInput${j}`).val("");
+    }
+    pokemonTeam = {};
   }
-
-  for (var i = 0; i < 6; i++) {
-    pokemonTeam[i] = $(`#pokemonInput${i + 1}`)
-      .val()
-      .toLowerCase();
-  }
-
-  const newTrainer = new Trainer(trainerName, trainerGender, pokemonTeam);
-  newTrainer.generateTrainerCard();
-
-  // ----------------------------------------------------------
-
-  $("#nameInput").val("");
-  for (var j = 1; j <= 6; j++) {
-    $(`#pokemonInput${j}`).val("");
-  }
-  pokemonTeam = {};
 });
 
 // ============================================================
@@ -88,10 +90,9 @@ Trainer.prototype.generateTrainerCard = function () {
             <div class="col-3">
                 <div class="row">
                     <div class="col-12">
-                        <h1>${trainerName} <i class="${trainerGender.icon}"></i></h1>
+                        <h1 class="trainer-name">${trainerName} <i class="${trainerGender.icon}"></i></h1>
                     </div>
                 </div>
-                <hr>
                 <div class="row">
                     <div class="col-12">
                         <img class="user-avatar" src=${trainerGender.img}
