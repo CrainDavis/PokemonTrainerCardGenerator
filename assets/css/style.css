@@ -1,0 +1,85 @@
+.hide {
+    display: none;
+}
+
+.jumbotron {
+  background-color: #f66060;
+  text-align: center;
+  padding: 10px;
+}
+.jumbo-title {
+  font-weight: bold;
+  color: whitesmoke;
+  font-size: 50px;
+}
+.jumbo-subtitle {
+  color: lightgray;
+  font-size: 15px;
+}
+.main-section {
+  justify-content: center;
+  background-color: gray;
+  padding: 20px;
+  border-radius: 20px;
+  border: 5px solid black;
+}
+.input-section {
+  text-align: center;
+  border: 3px solid white;
+  background-color: lightgray;
+  margin: 20px 50px;
+  padding: 20px 0px;
+  border-radius: 20px;
+}
+.user-info-form,
+.team-info-form {
+  padding: 20px;
+}
+.button-section {
+  text-align: center;
+}
+.submit-btn {
+  background-color: #f66060;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+}
+.submit-btn:hover {
+  background-color: #fddfdf;
+  color: #f66060;
+  border: 2px solid #f66060;
+}
+
+.trainer-card-container {
+  margin-bottom: 20px;
+}
+.trainer-card {
+  justify-content: center;
+  text-align: center;
+  background-color: darkslategray;
+  border: 3px solid green;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.fa-mars {
+    color: blue;
+}
+.fa-venus {
+    color: magenta;
+}
+.user-avatar {
+  width: 100%;
+  border-radius: 20px;
+}
+.pokemon-name-label {
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+.pokemon-img {
+  width: 100%;
+  margin: 10px 0px;
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid green;
+}

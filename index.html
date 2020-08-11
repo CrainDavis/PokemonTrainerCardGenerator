@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Pokemon Trainer Card Generator</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 jumbo-title">Pokemon Trainer Card Generator</h1>
+            <p class="lead jumbo-subtitle">just fill in name, gender, and your team of 6 Pokemon to create your very own
+                Trainer Card!</p>
+        </div>
+    </div>
+    <div id="userInputContainer" class="container">
+        <div class="row main-section">
+            <div class="col-12 input-section">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Trainer Info:</h4>
+                    </div>
+                </div>
+                <hr>
+                <form class="user-info-form">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="nameInput">NAME</label>
+                                <input type="name" class="form-control" id="nameInput" aria-describedby="nameHelp">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="genderSelect">GENDER</label>
+                                <select class="form-control" id="genderSelect">
+                                    <option>male</option>
+                                    <option>female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 input-section">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Pokemon Team:</h4>
+                    </div>
+                </div>
+                <hr>
+                <form class="team-info-form">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="nameInput">Pokemon #1</label>
+                                <input type="name" class="form-control" id="pokemonInput1" aria-describedby="nameHelp">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="nameInput">Pokemon #2</label>
+                                <input type="name" class="form-control" id="pokemonInput2" aria-describedby="nameHelp">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="nameInput">Pokemon #3</label>
+                                <input type="name" class="form-control" id="pokemonInput3" aria-describedby="nameHelp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="nameInput">Pokemon #4</label>
+                                <input type="name" class="form-control" id="pokemonInput4" aria-describedby="nameHelp">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="nameInput">Pokemon #5</label>
+                                <input type="name" class="form-control" id="pokemonInput5" aria-describedby="nameHelp">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="nameInput">Pokemon #6</label>
+                                <input type="name" class="form-control" id="pokemonInput6" aria-describedby="nameHelp">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4 button-section">
+                <button id="submitBtn" type="submit" class="btn btn-lg submit-btn">create trainer card</button>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div id="trainerCardGallery" class="container trainer-card-container">
+        <!-- trainer card generated here -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
